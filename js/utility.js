@@ -1,26 +1,41 @@
 
 //takes the user input from submit click, calculates tax, tip and total bill.  Then appends these to the total charges.
-function getBill (mealPrice, mealTax, mealTip) {
-console.log(mealTip, mealTax, mealPrice);
 
-  var meal = parseFloat(mealPrice);
 
-  var tax = mealPrice * (mealTax/100);
-  console.log("tax", tax);
+// function getBill (mealPrice, mealTax, mealTip) {
+// console.log(mealTip, mealTax, mealPrice);
 
-  var tip = mealPrice * (mealTip/100);
-  console.log("tip", tip);
 
-  var subtotal = meal + tax;
 
-  var billTotal = tax + tip + meal;
+//   //var tax = mealPrice * (mealTax/100);
+//   //console.log("tax", tax);
 
-  var answers = [subtotal, tip, billTotal];
-  // var answers = {key:subtotal, key:tip, key:billTotal};
-  console.log(answers);
-  return answers;
+//   //var tip = mealPrice * (mealTip/100);
+//   //console.log("tip", tip);
+
+//   //var subtotal = mealPrice + tax;
+
+//   var billTotal = tax + tip + mealPrice;
+
+//   var answers = [subtotal, tip, billTotal];
+//   // var answers = {key:subtotal, key:tip, key:billTotal};
+//   console.log(answers);
+//   return answers;
+// }
+
+function subtotalAmount(mealPrice, mealTax){
+  var subTotal = mealPrice *(mealTax/100) + mealPrice;
+  return subtotal;
 }
 
+function tipAmount(mealPrice, mealTip){
+  var tip = mealPrice *(mealTip/100);
+  return tipAmount;
+}
+
+// function billTotal(){
+//   var bill =
+// };
 
 //loops through runningTotalArray and adds up all the tip totals
 function tipTotals(array){
@@ -41,7 +56,7 @@ function mealCount (array){
 
 function averageTip (tips, meals) {
   var tipAverage = tips / meals;
-  console.log(tipAverage, "tttttttttaaaaaa");
+
   return tipAverage;
 
 }

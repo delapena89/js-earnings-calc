@@ -25,18 +25,21 @@ $(document).on('ready', function() {
     // var mealCost.mealPrice = $('input[name=meal-price]').val();
     // var mealCost.mealTax = $('input[name=meal-taxrate]').val();
     // var mealCost.mealTip = $('input[name=meal-tiprate]').val();
-    var mealPrice = $('input[name=meal-price]').val();
-    var mealTax = $('input[name=meal-taxrate]').val();
-    var mealTip = $('input[name=meal-tiprate]').val();
+    var mealPrice = parseFloat($('input[name=meal-price]').val());
+    var mealTax = parseFloat($('input[name=meal-taxrate]').val());
+    var mealTip = parseFloat($('input[name=meal-tiprate]').val());
     // container.push(mealPrice, mealTax, mealTip);
     $(".form-input").val('');
 
     //tipTotals(runningTotalArray);
     //mealArray.push(mealCost)
+    var sT = subtotalAmount(mealPrice, mealTax);
+    var tA = tipAmount(mealPrice, mealTip);
+    //var bT = billTotal()
+    runningTotalArray.push(sT, tA);
+    //var answers = getBill(mealPrice, mealTax, mealTip);
 
-    var answers = getBill(mealPrice, mealTax, mealTip);
-
-    runningTotalArray.push(answers);
+    //runningTotalArray.push(answers);
 
 
   //  for (var i = 0; i < runningTotalArray.length; i++) {
@@ -47,20 +50,20 @@ $(document).on('ready', function() {
   // };
 
 
-    var tipTotalsAnswer = tipTotals(runningTotalArray);
-    var mealCountAnswer = mealCount(runningTotalArray);
-    var averageTipAnswer = averageTip(tipTotalsAnswer, mealCountAnswer);
+    //var tipTotalsAnswer = tipTotals(runningTotalArray);
+    //var mealCountAnswer = mealCount(runningTotalArray);
+    //var averageTipAnswer = averageTip(tipTotalsAnswer, mealCountAnswer);
 
 
 
     //appends all the calculations to the DOM
-    $("#subtotal").html(answers[0]);
-    $("#tip").html(answers[1]);
+    $("#subtotal").html(sT);
+    $("#tip").html(tA);
     $("#total").html(answers[2]);
 
-    $("#Total-tips").html(tipTotalsAnswer);
-    $("#Meal-count").html(mealCountAnswer);
-    $('#Average-tip').html(averageTipAnswer);
+    //$("#Total-tips").html(tipTotalsAnswer);
+    //$("#Meal-count").html(mealCountAnswer);
+    //$('#Average-tip').html(averageTipAnswer);
   });
 
 
