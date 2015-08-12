@@ -27,3 +27,19 @@ function EarningTotals(){
   this.meals = 0;
   this.averageTip = 0;
 }
+
+EarningTotals.prototype.totalTipsCalc = function(array){
+  this.tips = 0;
+  for (var i = 0; i < array.length; i++) {
+    //total tips = each array within running array.tip
+    this.tips += array[i].tip;
+  }
+};
+
+EarningTotals.prototype.mealCountCalc = function(array){
+  this.meals = array.length;
+};
+
+EarningTotals.prototype.averageTipCalc = function(){
+this.averageTip = this.tips / this.meals;
+};
