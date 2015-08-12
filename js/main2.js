@@ -48,12 +48,13 @@ var runningTotalArray = [];
   });
 
 
-  //reset button clears all fields!!!NEED TO FIX
+  //reset button clears all fields
   $('input[value="Reset"]').on("click", function(){
-    $('span').html('');
-    runningTotals.tips = 0;
-    runningTotals.meals = 0;
-    runningTotals.averageTip = 0;
+    $('.reset-all').html('');
+    // runningTotals.tips = 0;
+    // runningTotals.meals = 0;
+    // runningTotals.averageTip = 0;
+    runningTotalArray = [];
   });
 
 

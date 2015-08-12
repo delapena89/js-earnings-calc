@@ -22,13 +22,13 @@
           <br>
           <form name="mealForm">
             <div class="form-group">
-              <input class="form-input" type="number" placeholder="Meal price..." name="meal-price" min="0" step=".01" required>
+              <input class="form-input reset-all" type="number" placeholder="Meal price..." name="meal-price" min="0" step=".01" required>
             </div>
             <div class="form-group">
-              <input class="form-input" type="number" placeholder="Tax rate... "name="meal-taxrate" min="0" max="100" step=".01" required>
+              <input class="form-input reset-all" type="number" placeholder="Tax rate... "name="meal-taxrate" min="0" max="100" step=".01" required>
             </div>
             <div class="form-group">
-              <input class="form-input" type="number" placeholder="Tip percentage..." name="meal-tiprate" min="0" max="100" step=".01" required>
+              <input class="form-input reset-all" type="number" placeholder="Tip percentage..." name="meal-tiprate" min="0" max="100" step=".01" required>
             </div>
             <input class="btn btn-default btn-sm" type="submit" value="Submit">
             <input class="btn btn-default btn-sm" type="button" value="Clear">
@@ -44,18 +44,18 @@
               <!-- customer totals -->
               <h2 class="text-center">Total Charges<br><span class="small">Charge per customer</span></h2>
               <div id="customer-totals">
-                <p>Subtotal:<span id="subtotal"></span></p>
-                <p>Tip:<span id="tip"></span></p>
-                <p>Total:<span id="total"></span></p>
+                <p>Subtotal:<span class="reset-all" id="subtotal"></span></p>
+                <p>Tip:<span class="reset-all" id="tip"></span></p>
+                <p>Total:<span class="reset-all" id="total"></span></p>
               </div>
             </div>
             <div class="col-sm-6">
               <!-- all totals -->
               <h2 class="text-center">Total Earnings<br><span class="small">Running totals</span></h2>
               <div id="running-totals">
-                <p>Total Tips:<span id="Total-tips"></span></p>
-                <p>Meal count:<span id="Meal-count"></span></p>
-                <p>Average tip:<span id="Average-tip"></span></p>
+                <p>Total Tips:<span class="reset-all" id="Total-tips"></span></p>
+                <p>Meal count:<span class="reset-all" id="Meal-count"></span></p>
+                <p>Average tip:<span class="reset-all" id="Average-tip"></span></p>
               </div>
               <div class="text-center">
                 <input class="btn btn-default btn-sm" type="button" value="Reset">
